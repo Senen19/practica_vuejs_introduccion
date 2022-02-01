@@ -22,14 +22,16 @@
             <div class="card-group">
                 <div class="card" style="width: 18rem;" v-for="item in col.collection.items">
                     <div class="card-body" v-for="peli in item.data">
+                        <dl>
                             <dt class="card-title">
                                 {{ peli.prompt }}
                             </dt>
                             <dd>
                                 {{peli.value}}
                             </dd>
+                        </dl>
                     </div>
-                    <a href="#" class="btn btn-primary">Ver</a>
+                    <button v-on:click="item.href" class="btn btn-primary" value="Ver">Ver</button>
                 </div> 
             </div>                    
         </div>
